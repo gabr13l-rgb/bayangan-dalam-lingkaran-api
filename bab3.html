@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 3 – Dibalik Lingkaran Kuning</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    /* Styling tombol navigasi & toggle audio konsisten seperti bab1 */
+    .navigation-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-button {
+      background: linear-gradient(135deg, #7c3aed, #d946ef);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(124, 58, 237, 0.6);
+      transition: background 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .nav-button:hover,
+    .nav-button:focus {
+      background: linear-gradient(135deg, #d946ef, #7c3aed);
+      transform: scale(1.05);
+      outline: none;
+    }
+    .audio-toggle {
+      position: fixed;
+      bottom: 110px;
+      right: 320px;
+      background: #7c3aed;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+    .audio-toggle:hover {
+      background: #d946ef;
+    }
+    .spotify-player.hidden {
+      transform: translateX(300px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .spotify-player {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fireParticles"></canvas>
+
+  <div class="container">
+    <header>
+      <h1 data-aos="fade-down">Bab 3 – Dibalik Lingkaran Kuning</h1>
+    </header>
+
+    <main>
+      <p data-aos="fade-up">Hari-hari berlalu, dan seperti bunga matahari yang pelan tapi pasti mencari arah cahaya, hubungan Gabriel dan Kinara ikut tumbuh. Nggak ada yang buru-buru. Nggak ada yang nanya, “kita ini apa?” Tapi keduanya sadar—ada rasa yang makin lama makin susah untuk diabaikan.</p>
+      <p data-aos="fade-up" data-aos-delay="100">Obrolan mereka mulai panjang. Dari sekadar balas-balasan story, jadi tukar cerita tentang hari yang ngebosenin. Dari tanya “udah makan?” jadi diskusi soal lagu favorit, mimpi, bahkan ketakutan-ketakutan kecil. Semuanya ngalir. Nggak dibuat-buat. Nggak pernah terasa canggung.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Kinara punya cara buat bikin Gabriel ngerasa nyaman. Nggak heboh, nggak lebay, tapi selalu ada. Kadang cuma dengan bilang “semangat ya,” atau sekadar kasih emoji peluk. Tapi bagi Gabriel, itu udah cukup buat ngelewatin satu hari penuh tekanan.</p>
+      <p data-aos="fade-up" data-aos-delay="300">Dan Gabriel mulai ngerasa... dia nggak sekadar suka.</p>
+      <p data-aos="fade-up" data-aos-delay="400">Dia jatuh. Tapi bukan jatuh yang buru-buru, bukan juga yang langsung ke dasar. Ini jatuh yang hati-hati. Pelan-pelan. Tapi dalam.</p>
+      <p data-aos="fade-up" data-aos-delay="500">Setiap ketemu Kinara—entah itu nggak sengaja di kampus, atau pas acara temen bareng—selalu ada momen yang nggak bisa dia lupakan. Kayak waktu Kinara lewat depan kelasnya, senyum sambil bawa jaket kuning terang yang mirip warna bunga matahari. Gabriel masih inget hari itu terang banget, tapi entah kenapa, warna kuning itu yang paling nyala.</p>
+      <p data-aos="fade-up" data-aos-delay="600">Semenjak itu, kuning bukan lagi warna ceria biasa buat Gabriel. Kuning jadi pengingat. Tentang seseorang yang muncul di hidupnya tanpa rencana, tapi bikin segalanya beda. Tentang rasa yang tumbuh dalam diam, tapi makin nyata.</p>
+      <p data-aos="fade-up" data-aos-delay="700">Malam-malam Gabriel jadi lebih tenang kalau sempat ngobrol sama Kinara. Dan kalau nggak, dia tetap nulis di catatan hapenya—apa aja yang pengen dia ceritain nanti. Hal kecil, mungkin sepele. Tapi cinta yang pelan selalu menghargai detail.</p>
+      <p data-aos="fade-up" data-aos-delay="800">Tapi di balik semua itu, Gabriel juga mulai sadar satu hal: dia mulai bergantung. Bukan karena Kinara minta, tapi karena Gabriel pengen. Dia pengen jadi bagian dari hari-harinya Kinara. Dia pengen tau kabarnya, pengen hadir di kesehariannya. Meski hubungan mereka belum punya nama, Gabriel udah ngerasa... dia udah terlalu dalam.</p>
+      <p data-aos="fade-up" data-aos-delay="900">Dan mungkin, di balik senyum dan candaan mereka, ada satu hal yang belum pernah benar-benar diucap:</p>
+      <p data-aos="fade-up" data-aos-delay="1000"><em>“Apa kita ngerasain hal yang sama?”</em></p>
+
+      <div class="navigation-links" data-aos="fade-up" data-aos-delay="1100">
+        <a href="bab2.html" class="nav-button" aria-label="Kembali ke Bab 2">← Bab 2</a>
+        <a href="bab4.html" class="nav-button" aria-label="Lanjut ke Bab 4">Bab 4 →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="index.html">← Kembali ke Daftar Bab</a></p>
+      <p>© 2025 Bayangan dalam Lingkaran Api — Ditulis oleh Gabriel</p>
+    </footer>
+  </div>
+
+  <button class="audio-toggle" aria-label="Toggle Spotify Player" title="Toggle Spotify Player" type="button">🎵</button>
+
+  <div class="spotify-player" aria-label="Spotify Player Bab 3">
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/6X9uiqa6JkyxXckRFBKWNE?utm_source=generator"
+      width="100%"
+      height="80"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/particles.js"></script>
+  <script>
+    AOS.init();
+    const toggleBtn = document.querySelector('.audio-toggle');
+    const spotifyPlayer = document.querySelector('.spotify-player');
+
+    toggleBtn.addEventListener('click', () => {
+      spotifyPlayer.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

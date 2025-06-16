@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bayangan dalam Lingkaran Api</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    /* Pastikan container daftar bab memiliki background dan padding agar teks terlihat jelas */
+    .container {
+      background-color: #1a1a1a;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+    }
+    /* Daftar bab dengan latar agak gelap dan bayangan halus agar tulisan terlihat on-point */
+    .daftar-bab {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background: #2c2c2c;
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
+    .daftar-bab li {
+      margin-bottom: 1.2rem;
+    }
+    .daftar-bab a {
+      color: #ffe082;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .daftar-bab a:hover, .daftar-bab a:focus {
+      color: #fff;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.6);
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fireParticles"></canvas>
+
+  <div class="container">
+    <header>
+      <h1 data-aos="fade-down">Bayangan dalam Lingkaran Api</h1>
+      <p class="blurb typing" data-aos="fade-up">
+        <em>“Pertemuan itu tak sengaja. Tapi rasa yang tumbuh tak pernah selesai. Bayangan dalam Lingkaran Api adalah tentang cinta yang terus pulang ke tempat yang sama — meski tak pernah benar-benar kembali.”</em>
+      </p>
+    </header>
+
+    <main>
+      <h2 data-aos="fade-up">Daftar Bab</h2>
+      <ul class="daftar-bab">
+        <li><a href="bab1.html">Bab 1 – Api Pertama, Pertemuan Pertama</a></li>
+        <li><a href="bab2.html">Bab 2 – Balasan Kecil, Tumbuh Pelan</a></li>
+        <li><a href="bab3.html">Bab 3 – Dibalik Lingkaran Kuning</a></li>
+        <li><a href="bab4.html">Bab 4 – Menghangat, Menghadap, dan Tumbuh</a></li>
+        <li><a href="bab5.html">Bab 5 – Bersandar pada Bunga yang Tumbuh</a></li>
+        <li><a href="bab6.html">Bab 6 – Sunyi yang Masih Berpenghuni</a></li>
+        <li><a href="bab7.html">Bab 7 – Satu Lingkaran Menuju Nol</a></li>
+        <li><a href="epilog.html">Epilog – Masih di Titik yang Sama</a></li>
+      </ul>
+    </main>
+
+    <footer>
+      <p>© 2025 Bayangan dalam Lingkaran Api — Ditulis oleh Gabriel</p>
+    </footer>
+  </div>
+
+  <div class="spotify-player">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1QgYZyDzY22JkXbAuoYZBe?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/particles.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 2 – Balasan Kecil, Tumbuh Pelan</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    /* Styling tombol navigasi & toggle audio konsisten seperti bab1 */
+    .navigation-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-button {
+      background: linear-gradient(135deg, #7c3aed, #d946ef);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(124, 58, 237, 0.6);
+      transition: background 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .nav-button:hover,
+    .nav-button:focus {
+      background: linear-gradient(135deg, #d946ef, #7c3aed);
+      transform: scale(1.05);
+      outline: none;
+    }
+    .audio-toggle {
+      position: fixed;
+      bottom: 110px;
+      right: 320px;
+      background: #7c3aed;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+    .audio-toggle:hover {
+      background: #d946ef;
+    }
+    .spotify-player.hidden {
+      transform: translateX(300px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .spotify-player {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fireParticles"></canvas>
+
+  <div class="container">
+    <header>
+      <h1 data-aos="fade-down">Bab 2 – Balasan Kecil, Tumbuh Pelan</h1>
+    </header>
+
+    <main>
+      <p data-aos="fade-up">Kadang rasa tumbuh bukan karena hal besar, tapi justru dari yang paling sederhana.</p>
+      <p data-aos="fade-up" data-aos-delay="100">Gabriel nggak pernah nyangka kalau balasan singkat di story Instagram bisa bikin jantungnya deg-degan seharian. Cuma emot senyum atau tulisan “iya lucu juga ya,” tapi efeknya bisa kayak habis lari satu putaran penuh di stadion. Nafasnya beda. Degupnya lain.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Sejak api unggun itu, Gabriel dan Kinara nggak langsung dekat. Mereka kembali ke rutinitas masing-masing—kampus, tugas, temen nongkrong, kehidupan yang sibuk. Tapi entah kenapa, bayangan Kinara nggak pernah benar-benar pergi dari kepala Gabriel. Setiap buka Instagram, ada harapan kecil kalau nama “Kinara” muncul di bagian “Seen”.</p>
+      <p data-aos="fade-up" data-aos-delay="300">Dan ketika harapan itu kejadian... itu udah cukup buat ngerasa hari itu indah.</p>
+      <p data-aos="fade-up" data-aos-delay="400">Mulai dari like story, balasan random, dan akhirnya obrolan kecil yang nyambung. DM mereka bukan obrolan panjang, tapi punya getaran yang nggak bisa dijelaskan. Kayak bunga matahari yang baru numbuh—belum tinggi, belum mekar, tapi cukup buat bikin taman itu nggak kosong lagi.</p>
+      <p data-aos="fade-up" data-aos-delay="500">Kinara bukan tipe yang gampang diajak basa-basi. Tapi setiap kata yang dia lempar punya tempat. Gabriel merasa kayak lagi ngobrol sama seseorang yang... ngerti. Nggak perlu banyak gaya, nggak perlu terlalu cerewet. Cukup satu dua kalimat dari Kinara, dan Gabriel ngerasa diperhatiin.</p>
+      <p data-aos="fade-up" data-aos-delay="600">Gabriel mulai sadar kalau ini bukan sekadar penasaran. Bukan juga sekadar rasa suka yang muncul karena tampang atau vibes. Ini lebih dari itu. Rasa yang tumbuh dari koneksi kecil, tapi dalem. Yang pelan-pelan jadi kebiasaan.</p>
+      <p data-aos="fade-up" data-aos-delay="700">Setiap malam sebelum tidur, Gabriel ngecek DM. Bukan karena takut ada tugas kelewat. Tapi karena dia nunggu satu notifikasi dari satu nama: Kinara.</p>
+      <p data-aos="fade-up" data-aos-delay="800">Dari situlah semuanya mulai pelan-pelan berubah. Tanpa sadar, Gabriel mulai ngejaga mood-nya sepanjang hari, supaya bisa cerita yang seru ke Kinara nanti malam. Mulai ngelakuin hal-hal kecil yang bisa diceritain. Mulai memperhatikan hal-hal receh, karena siapa tau itu bisa jadi bahan obrolan.</p>
+      <p data-aos="fade-up" data-aos-delay="900">Ini bukan cinta yang langsung besar. Ini bukan kisah yang meledak dari awal. Tapi lebih ke cinta yang tumbuh pelan-pelan. Yang nggak memaksa, tapi nyata.</p>
+      <p data-aos="fade-up" data-aos-delay="1000">Dan tanpa disadari Gabriel, benih itu udah mulai disiram.</p>
+
+      <div class="navigation-links" data-aos="fade-up" data-aos-delay="1100">
+        <a href="bab1.html" class="nav-button" aria-label="Kembali ke Bab 1">← Bab 1</a>
+        <a href="bab3.html" class="nav-button" aria-label="Lanjut ke Bab 3">Bab 3 →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="index.html">← Kembali ke Daftar Bab</a></p>
+      <p>© 2025 Bayangan dalam Lingkaran Api — Ditulis oleh Gabriel</p>
+    </footer>
+  </div>
+
+  <button class="audio-toggle" aria-label="Toggle Spotify Player" title="Toggle Spotify Player" type="button">🎵</button>
+
+  <div class="spotify-player" aria-label="Spotify Player Bab 2">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6WsG550j67Aj29z0iel7lo?utm_source=generator" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/particles.js"></script>
+  <script>
+    AOS.init();
+    // Toggle Spotify player visibility
+    const toggleBtn = document.querySelector('.audio-toggle');
+    const spotifyPlayer = document.querySelector('.spotify-player');
+
+    toggleBtn.addEventListener('click', () => {
+      spotifyPlayer.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 1 – Api Pertama, Pertemuan Pertama</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    /* Tambahan styling untuk tombol navigasi dan control audio */
+    .navigation-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-button {
+      background: linear-gradient(135deg, #7c3aed, #d946ef);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(124, 58, 237, 0.6);
+      transition: background 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .nav-button:hover,
+    .nav-button:focus {
+      background: linear-gradient(135deg, #d946ef, #7c3aed);
+      transform: scale(1.05);
+      outline: none;
+    }
+    /* Audio player toggle button */
+    .audio-toggle {
+      position: fixed;
+      bottom: 110px;
+      right: 320px;
+      background: #7c3aed;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+    .audio-toggle:hover {
+      background: #d946ef;
+    }
+    /* Audio player visible/hidden */
+    .spotify-player.hidden {
+      transform: translateX(300px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .spotify-player {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fireParticles"></canvas>
+
+  <div class="container">
+    <header>
+      <h1 data-aos="fade-down">Bab 1 – Api Pertama, Pertemuan Pertama</h1>
+    </header>
+
+    <main>
+      <p data-aos="fade-up">
+        Langit malam menggantung tenang di atas hutan pinus yang disulap jadi tempat perkemahan. Api unggun menyala dengan liarnya, menari-nari di tengah dinginnya angin malam yang menggigit. Orang-orang mengelilinginya dengan suara tawa, gitar, dan kopi sachet yang terlalu manis. Tapi bukan itu yang gue inget paling kuat.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Yang gue inget… adalah saat mata gue secara nggak sengaja nemu dia.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Kinara.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="300">
+        Jaket kuning yang dia pakai nyala banget di antara kerumunan. Bukan kuning nyentrik yang ganggu mata, tapi kuning kayak bunga matahari yang lagi mekar. Hangat, tenang, dan somehow… menarik perhatian tanpa usaha. Gue nggak tau dia siapa, tapi dari cara dia duduk diem sambil merhatiin api, gue bisa nebak: dia bukan tipe yang suka cari spotlight, tapi spotlight yang justru nyamperin dia.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="400">
+        Pertemuan pertama itu nggak ada dialog panjang. Cuma sekadar senyum dan, entah kenapa, mata kita ketemu. Ada sesuatu di situ—semacam getaran aneh yang nggak bisa gue jelasin.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="500">
+        Malam itu, obrolan kita cuma basa-basi tipis soal kopi sachet yang kebanyakan gula, dan tentang suara jangkrik yang lebih berisik dari isi kepala. Tapi gue inget jelas suara dia. Lembut, tenang, tapi bukan yang manja. Dia ngomong dengan kalimat yang dipikirin dulu, dan itu bikin gue dengerin.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="600">
+        Nama dia gue dapet dari temen satu circle. Katanya anak kampus sebelah. Dan pas tahu dia bukan bagian dari rombongan gue, malah bikin penasaran.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="700">
+        Gue nggak tau kenapa, tapi sejak malam itu… ada sesuatu yang mulai nyala. Kayak api unggun itu.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="800">
+        Bukan panas yang bakar, tapi hangat yang ngajak duduk lebih lama.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="900">
+        Dan mungkin, dari semua yang duduk di situ, gue satu-satunya yang pulang dengan rasa yang tumbuh. Belum besar. Tapi udah tumbuh.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="1000">
+        <em>“Ada pertemuan yang nggak pernah kita cari, tapi justru bikin kita nggak bisa berhenti nyari.”</em>
+      </p>
+
+      <div class="navigation-links">
+        <a href="index.html" class="nav-button" aria-label="Kembali ke Daftar Bab">← Daftar Bab</a>
+        <a href="bab2.html" class="nav-button" aria-label="Lanjut ke Bab 2">Bab 2 →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Bayangan dalam Lingkaran Api — Ditulis oleh Gabriel</p>
+    </footer>
+  </div>
+
+  <button class="audio-toggle" aria-label="Toggle Spotify Player" title="Toggle Spotify Player" type="button">🎵</button>
+
+  <div class="spotify-player" aria-label="Spotify Player Bab 1">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7wlfGt5NkpPT6nRC6yCr7u?utm_source=generator" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/particles.js"></script>
+  <script>
+    AOS.init();
+
+    // Toggle Spotify player visibility
+    const toggleBtn = document.querySelector('.audio-toggle');
+    const spotifyPlayer = document.querySelector('.spotify-player');
+
+    toggleBtn.addEventListener('click', () => {
+      spotifyPlayer.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
+

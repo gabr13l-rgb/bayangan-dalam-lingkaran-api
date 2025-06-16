@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 5 – Bersandar pada Bunga yang Tumbuh</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    .navigation-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-button {
+      background: linear-gradient(135deg, #7c3aed, #d946ef);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(124, 58, 237, 0.6);
+      transition: background 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .nav-button:hover,
+    .nav-button:focus {
+      background: linear-gradient(135deg, #d946ef, #7c3aed);
+      transform: scale(1.05);
+      outline: none;
+    }
+    .audio-toggle {
+      position: fixed;
+      bottom: 110px;
+      right: 320px;
+      background: #7c3aed;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+    .audio-toggle:hover {
+      background: #d946ef;
+    }
+    .spotify-player.hidden {
+      transform: translateX(300px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .spotify-player {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fireParticles"></canvas>
+
+  <div class="container">
+    <header>
+      <h1 data-aos="fade-down">Bab 5 – Bersandar pada Bunga yang Tumbuh</h1>
+    </header>
+
+    <main>
+      <p data-aos="fade-up">Hari itu datang juga.</p>
+      <p data-aos="fade-up" data-aos-delay="100">Nggak pakai momen heboh, nggak ada kembang api atau bunga di tangan. Tapi semua terasa pas. Gabriel dan Kinara resmi menjalin hubungan. Akhirnya, rasa yang tumbuh pelan-pelan itu punya nama: cinta.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Gabriel merasa lega. Tapi lebih dari itu, dia bahagia.</p>
+      <p data-aos="fade-up" data-aos-delay="300">Buat dia, Kinara bukan sekadar pacar. Kinara adalah rumah. Tempat di mana semua rasa lelah bisa reda. Tempat di mana pikiran nggak harus sembunyi. Bersama Kinara, dia bisa jadi dirinya sendiri—tanpa topeng, tanpa pura-pura kuat.</p>
+      <p data-aos="fade-up" data-aos-delay="400">Gabriel mulai membangun. Dia kasih effort lebih, bukan karena dituntut, tapi karena dia ingin. Antar jemput walau beda kampus, ngingetin makan walau udah tahu jawabannya "iya kok", bahkan nungguin Kinara selesai kelas meski hujan turun deras. Semua dilakuin tanpa hitung-hitungan.</p>
+      <p data-aos="fade-up" data-aos-delay="500">Kadang Kinara nanya, “Capek nggak sih, Gab?”</p>
+      <p data-aos="fade-up" data-aos-delay="600">Gabriel cuma senyum. "Nggak. Selama kamu tujuan akhirnya, aku nggak nyasar."</p>
+      <p data-aos="fade-up" data-aos-delay="700">Dia suka duduk berdua di motor, ngelewatin jalanan panjang sambil denger playlist yang mereka susun bareng. Kadang mereka nggak ngomong banyak, cuma saling genggam tangan. Tapi justru di situ Gabriel ngerasa paling lengkap.</p>
+      <p data-aos="fade-up" data-aos-delay="800">Cinta mereka mulai matang, mulai stabil. Nggak lagi sekadar “aku kangen kamu,” tapi udah sampai tahap “apa kamu butuh aku sekarang?”</p>
+      <p data-aos="fade-up" data-aos-delay="900">Tapi di balik semua rasa tenang itu, Gabriel kadang ngerasa... terlalu nyaman. Terlalu terlena. Seolah-olah dia lupa bahwa bunga yang tumbuh terlalu cepat kadang bikin silau. Indah, tapi bisa membutakan.</p>
+      <p data-aos="fade-up" data-aos-delay="1000">Tapi Gabriel nggak peduli.</p>
+      <p data-aos="fade-up" data-aos-delay="1100">Buat dia, selama Kinara masih jadi cahaya yang dituju, dia akan terus tumbuh ke arah itu. Meski matahari bisa bikin panas, Gabriel percaya—dia akan baik-baik aja selama bersama Kinara.</p>
+      <p data-aos="fade-up" data-aos-delay="1200">Dan mungkin, waktu itu, dia belum sadar bahwa rumah juga bisa terasa dingin. Bahkan ketika atap dan dindingnya masih utuh.</p>
+
+      <div class="navigation-links" data-aos="fade-up" data-aos-delay="1300">
+        <a href="bab4.html" class="nav-button" aria-label="Kembali ke Bab 4">← Bab 4</a>
+        <a href="bab6.html" class="nav-button" aria-label="Lanjut ke Bab 6">Bab 6 →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="index.html">← Kembali ke Daftar Bab</a></p>
+      <p>© 2025 Bayangan dalam Lingkaran Api — Ditulis oleh Gabriel</p>
+    </footer>
+  </div>
+
+  <button class="audio-toggle" aria-label="Toggle Spotify Player" title="Toggle Spotify Player" type="button">🎵</button>
+
+  <div class="spotify-player" aria-label="Spotify Player Bab 5">
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/3KkXRkHbMCARz0aVfEt68P?utm_source=generator"
+      width="100%"
+      height="80"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/particles.js"></script>
+  <script>
+    AOS.init();
+    const toggleBtn = document.querySelector('.audio-toggle');
+    const spotifyPlayer = document.querySelector('.spotify-player');
+
+    toggleBtn.addEventListener('click', () => {
+      spotifyPlayer.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 7 – Satu Lingkaran Menuju Nol</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    /* Styling tombol navigasi & toggle audio konsisten seperti bab1 */
+    .navigation-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-button {
+      background: linear-gradient(135deg, #7c3aed, #d946ef);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(124, 58, 237, 0.6);
+      transition: background 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .nav-button:hover,
+    .nav-button:focus {
+      background: linear-gradient(135deg, #d946ef, #7c3aed);
+      transform: scale(1.05);
+      outline: none;
+    }
+    .audio-toggle {
+      position: fixed;
+      bottom: 110px;
+      right: 320px;
+      background: #7c3aed;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+    .audio-toggle:hover {
+      background: #d946ef;
+    }
+    .spotify-player.hidden {
+      transform: translateX(300px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .spotify-player {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fireParticles"></canvas>
+
+  <div class="container">
+    <header>
+      <h1 data-aos="fade-down">Bab 7 – Satu Lingkaran Menuju Nol</h1>
+    </header>
+
+    <main>
+      <p data-aos="fade-up">Gabriel masih di sana.</p>
+      <p data-aos="fade-up" data-aos-delay="100">Di rumah yang sama, dengan dinding yang makin retak, dengan jendela yang sudah jarang dibuka. Kinara masih ada, tapi rasanya seperti bayangan—terlihat tapi tak bisa digenggam.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Hari-hari terasa aneh. Seperti mimpi yang diputar ulang, tapi ending-nya tetap tak berubah.</p>
+      <p data-aos="fade-up" data-aos-delay="300">Gabriel mencoba bicara. Ia ajak Kinara bertemu, mencoba menjelaskan isi kepalanya yang penuh tanya. Tapi yang datang bukan jawaban, hanya senyum kecil dan tatapan kosong. Bukan benci. Tapi juga bukan cinta.</p>
+      <p data-aos="fade-up" data-aos-delay="400">Dan di situ Gabriel paham.</p>
+      <p data-aos="fade-up" data-aos-delay="500">Bahwa perasaannya berputar-putar dalam satu lingkaran yang sama. Tidak maju, tidak mundur. Hanya muter—dengan harapan yang sekarat tapi masih dipeluk.</p>
+      <p data-aos="fade-up" data-aos-delay="600">Ia mulai sadar: ini bukan tentang putus atau bertahan.</p>
+      <p data-aos="fade-up" data-aos-delay="700">Ini tentang bagaimana semuanya diam-diam kembali ke titik awal—titik di mana perasaan belum punya nama, tapi sudah menyakitkan. Seperti kembali ke 0.KM, bukan karena ingin memulai ulang, tapi karena tidak pernah benar-benar berjalan.</p>
+      <p data-aos="fade-up" data-aos-delay="800">Gabriel duduk di halte tempat mereka pertama kali nunggu hujan reda. Dulu mereka ketawa di sana, main suit rebutan payung, sambil makan gorengan satu plastik. Sekarang tempat itu sepi. Sama seperti dirinya.</p>
+      <p data-aos="fade-up" data-aos-delay="900">Setiap tempat yang pernah jadi saksi rasa mereka, kini jadi museum kenangan yang nggak bisa dihapus. Dejavu itu nyata. Terlalu nyata.</p>
+      <p data-aos="fade-up" data-aos-delay="1000">Gabriel akhirnya sadar...</p>
+      <p data-aos="fade-up" data-aos-delay="1100">Kinara bukan luka yang belum sembuh.</p>
+      <p data-aos="fade-up" data-aos-delay="1200">Tapi dia penyebab luka yang sama—berulang-ulang, dengan wajah yang tak pernah berubah.</p>
+      <p data-aos="fade-up" data-aos-delay="1300">Dan yang paling menyakitkan?</p>
+      <p data-aos="fade-up" data-aos-delay="1400">Gabriel tetap jatuh cinta padanya. Berkali-kali. Di titik yang sama. Di lingkaran yang sama.</p>
+
+      <div class="navigation-links" data-aos="fade-up" data-aos-delay="1500">
+        <a href="bab6.html" class="nav-button" aria-label="Kembali ke Bab 6">← Bab 6</a>
+        <a href="epilog.html" class="nav-button" aria-label="Lanjut ke Epilog">Epilog →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="index.html">← Kembali ke Daftar Bab</a></p>
+      <p>© 2025 Bayangan dalam Lingkaran Api — Ditulis oleh Gabriel</p>
+    </footer>
+  </div>
+
+  <button class="audio-toggle" aria-label="Toggle Spotify Player" title="Toggle Spotify Player" type="button">🎵</button>
+
+  <div class="spotify-player" aria-label="Spotify Player Bab 7">
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/2hN3kzoTxu7KqYn3gu4caa?utm_source=generator"
+      width="100%"
+      height="80"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/particles.js"></script>
+  <script>
+    AOS.init();
+    const toggleBtn = document.querySelector('.audio-toggle');
+    const spotifyPlayer = document.querySelector('.spotify-player');
+
+    toggleBtn.addEventListener('click', () => {
+      spotifyPlayer.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

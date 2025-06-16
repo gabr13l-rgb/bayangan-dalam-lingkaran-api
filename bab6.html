@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 6 – Sunyi yang Masih Berpenghuni</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    /* Styling tombol navigasi & toggle audio konsisten seperti bab1 */
+    .navigation-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-button {
+      background: linear-gradient(135deg, #7c3aed, #d946ef);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(124, 58, 237, 0.6);
+      transition: background 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .nav-button:hover,
+    .nav-button:focus {
+      background: linear-gradient(135deg, #d946ef, #7c3aed);
+      transform: scale(1.05);
+      outline: none;
+    }
+    .audio-toggle {
+      position: fixed;
+      bottom: 110px;
+      right: 320px;
+      background: #7c3aed;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+    .audio-toggle:hover {
+      background: #d946ef;
+    }
+    .spotify-player.hidden {
+      transform: translateX(300px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .spotify-player {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fireParticles"></canvas>
+
+  <div class="container">
+    <header>
+      <h1 data-aos="fade-down">Bab 6 – Sunyi yang Masih Berpenghuni</h1>
+    </header>
+
+    <main>
+      <p data-aos="fade-up">Cinta nggak selalu pecah dengan suara keras. Kadang, dia hancur diam-diam. Pelan, tapi pasti.</p>
+      <p data-aos="fade-up" data-aos-delay="100">Gabriel mulai merasakannya—bukan lewat kata-kata, tapi lewat keheningan. Kinara masih ada. Pesannya masih masuk. Pertemuan kadang masih terjadi. Tapi semuanya berubah. Bukan drastis, bukan mendadak, tapi cukup buat bikin dada Gabriel sesak setiap kali pulang tanpa pelukan.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Ada jeda. Ada jarak.</p>
+      <p data-aos="fade-up" data-aos-delay="300">Kalau dulu Kinara sering nanya kabar duluan, sekarang Gabriel yang harus memulai semua. Kalau dulu tawa mereka mengisi ruang, kini obrolan jadi pengisi sunyi yang terlalu kentara. Kinara seperti menarik diri, tapi tidak pergi. Hadir, tapi tidak benar-benar ada.</p>
+      <p data-aos="fade-up" data-aos-delay="400">Dan itu yang paling menyakitkan.</p>
+      <p data-aos="fade-up" data-aos-delay="500">Gabriel duduk sendiri di café kecil yang biasanya mereka datangi berdua. Dia masih pesan minuman favorit Kinara. Masih simpan spot duduk di pojok kanan dekat jendela. Tapi hari itu, kursi di depan tetap kosong.</p>
+      <p data-aos="fade-up" data-aos-delay="600">Dia mencoba menyangkal. Mungkin Kinara sibuk. Mungkin Kinara lelah. Tapi jauh di dalam hatinya, Gabriel tahu: ini bukan soal waktu atau tugas kampus. Ini tentang rasa yang pelan-pelan berubah arah.</p>
+      <p data-aos="fade-up" data-aos-delay="700">Dia kirim pesan:</p>
+      <p data-aos="fade-up" data-aos-delay="800">“Kamu baik-baik aja?”</p>
+      <p data-aos="fade-up" data-aos-delay="900">Dibalas. Tapi jeda balasannya terlalu panjang, dan isinya terlalu pendek.</p>
+      <p data-aos="fade-up" data-aos-delay="1000">“Iya, maaf baru bales.”</p>
+      <p data-aos="fade-up" data-aos-delay="1100">Gabriel nggak marah. Cuma... kecewa. Dan itu lebih berat dari amarah.</p>
+      <p data-aos="fade-up" data-aos-delay="1200">Setiap kali mereka bertemu, Kinara seperti membawa kabut. Matanya tak lagi hangat, senyumnya tak lagi utuh. Tapi Gabriel tetap bertahan. Dia percaya rumah itu masih bisa diperbaiki. Masih bisa dikembalikan seperti semula.</p>
+      <p data-aos="fade-up" data-aos-delay="1300">Tapi yang tak dia sadari: rumah itu masih berdiri, tapi penghuninya mungkin sudah mulai berkemas.</p>
+      <p data-aos="fade-up" data-aos-delay="1400">Gabriel duduk di kamar, memandangi foto mereka berdua. Matanya sembab, tapi tak keluar air mata. Hatinya sunyi. Ia belum siap kehilangan. Atau... belum siap mengakui bahwa ia sedang kehilangan.</p>
+      <p data-aos="fade-up" data-aos-delay="1500">Cinta mereka kini seperti rumah tua. Masih berdiri, tapi tidak lagi nyaman. Dan Gabriel tetap tinggal di dalamnya, berharap suatu hari suara langkah kaki itu kembali terdengar di lorongnya.</p>
+      <p data-aos="fade-up" data-aos-delay="1600">Tapi sampai kapan?</p>
+
+      <div class="navigation-links" data-aos="fade-up" data-aos-delay="1700">
+        <a href="bab5.html" class="nav-button" aria-label="Kembali ke Bab 5">← Bab 5</a>
+        <a href="bab7.html" class="nav-button" aria-label="Lanjut ke Bab 7">Bab 7 →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="index.html">← Kembali ke Daftar Bab</a></p>
+      <p>© 2025 Bayangan dalam Lingkaran Api — Ditulis oleh Gabriel</p>
+    </footer>
+  </div>
+
+  <button class="audio-toggle" aria-label="Toggle Spotify Player" title="Toggle Spotify Player" type="button">🎵</button>
+
+  <div class="spotify-player" aria-label="Spotify Player Bab 6">
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/6OjvvycN71VVoO2J7tz4bW?utm_source=generator"
+      width="100%"
+      height="80"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/particles.js"></script>
+  <script>
+    AOS.init();
+    const toggleBtn = document.querySelector('.audio-toggle');
+    const spotifyPlayer = document.querySelector('.spotify-player');
+
+    toggleBtn.addEventListener('click', () => {
+      spotifyPlayer.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

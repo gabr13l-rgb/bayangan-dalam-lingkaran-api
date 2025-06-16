@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bab 4 – Menghangat, Menghadap, dan Tumbuh</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    /* Styling tombol navigasi & toggle audio konsisten seperti bab1 */
+    .navigation-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-button {
+      background: linear-gradient(135deg, #7c3aed, #d946ef);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(124, 58, 237, 0.6);
+      transition: background 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .nav-button:hover,
+    .nav-button:focus {
+      background: linear-gradient(135deg, #d946ef, #7c3aed);
+      transform: scale(1.05);
+      outline: none;
+    }
+    .audio-toggle {
+      position: fixed;
+      bottom: 110px;
+      right: 320px;
+      background: #7c3aed;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+    .audio-toggle:hover {
+      background: #d946ef;
+    }
+    .spotify-player.hidden {
+      transform: translateX(300px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .spotify-player {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fireParticles"></canvas>
+
+  <div class="container">
+    <header>
+      <h1 data-aos="fade-down">Bab 4 – Menghangat, Menghadap, dan Tumbuh</h1>
+    </header>
+
+    <main>
+      <p data-aos="fade-up">Cinta nggak selalu butuh pengakuan lantang. Kadang cukup hadir secara konsisten, tumbuh tanpa suara, dan mengakar pelan-pelan. Begitu juga Gabriel dan Kinara.</p>
+      <p data-aos="fade-up" data-aos-delay="100">Walau dari kampus yang berbeda, semesta seperti nggak pernah kehabisan cara buat bikin mereka terus ketemu. Kadang nggak sengaja pas istirahat, kadang tiba-tiba ada acara bareng yang nggak pernah direncanakan. Tapi setiap pertemuan itu... terasa pas. Nggak terlalu sering, tapi cukup buat bikin rindu terus punya alasan.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Mereka jadi lebih sering ngobrol, ketawa, bahkan saling tahu kebiasaan kecil satu sama lain. Kinara selalu minum teh tanpa gula. Gabriel suka ngemil biskuit coklat pas lagi stres. Hal-hal remeh yang justru bikin mereka merasa dekat.</p>
+      <p data-aos="fade-up" data-aos-delay="300">Dan yang paling kerasa—ada kehangatan yang baru.</p>
+      <p data-aos="fade-up" data-aos-delay="400">Kalau dulu Gabriel cuma senyum tiap Kinara bales chat, sekarang senyumnya lebih lama. Kalau dulu dia cuma penasaran, sekarang dia perhatian. Dan Kinara… dia mulai membalas dengan frekuensi yang sama. Bukan cuma membalas chat, tapi juga hadir dengan cara yang beda. Nanya kabar duluan, ngajak ngopi kalau lagi ada waktu luang, atau sekadar cerita tentang dosen killer di kelasnya.</p>
+      <p data-aos="fade-up" data-aos-delay="500">Setiap pertemuan, meski mendadak, selalu jadi ruang buat mereka tumbuh. Mereka duduk di bangku taman kampus, atau di warung kopi kecil dekat perempatan—nggak penting tempatnya, yang penting bareng. Kadang mereka diam lama, hanya saling memandang sambil mainin gelas minuman yang mulai dingin.</p>
+      <p data-aos="fade-up" data-aos-delay="600">Cinta mereka seperti bunga matahari yang mulai mencari arah cahaya. Menghadap pelan, tapi pasti. Ada arah yang jelas. Bukan yang terburu-buru, tapi menghangatkan.</p>
+      <p data-aos="fade-up" data-aos-delay="700">Kinara jadi lebih terbuka. Gabriel pun makin yakin. Tapi meski begitu, mereka tetap nggak pernah ngomong soal "kita ini apa." Nggak karena takut, tapi karena dua-duanya sedang menikmati proses. Belajar mengenal lebih dalam, sebelum memberi label.</p>
+      <p data-aos="fade-up" data-aos-delay="800">Dan meski Gabriel kadang ingin nanya, dia tahan. Karena baginya, Kinara sudah cukup menjawab lewat caranya hadir.</p>
+      <p data-aos="fade-up" data-aos-delay="900">Cinta itu tumbuh, pelan, tapi nyata.</p>
+
+      <div class="navigation-links" data-aos="fade-up" data-aos-delay="1000">
+        <a href="bab3.html" class="nav-button" aria-label="Kembali ke Bab 3">← Bab 3</a>
+        <a href="bab5.html" class="nav-button" aria-label="Lanjut ke Bab 5">Bab 5 →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="index.html">← Kembali ke Daftar Bab</a></p>
+      <p>© 2025 Bayangan dalam Lingkaran Api — Ditulis oleh Gabriel</p>
+    </footer>
+  </div>
+
+  <button class="audio-toggle" aria-label="Toggle Spotify Player" title="Toggle Spotify Player" type="button">🎵</button>
+
+  <div class="spotify-player" aria-label="Spotify Player Bab 4">
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/3AJwUDP919kvQ9QcozQPxg?utm_source=generator"
+      width="100%"
+      height="80"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/particles.js"></script>
+  <script>
+    AOS.init();
+    const toggleBtn = document.querySelector('.audio-toggle');
+    const spotifyPlayer = document.querySelector('.spotify-player');
+
+    toggleBtn.addEventListener('click', () => {
+      spotifyPlayer.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
